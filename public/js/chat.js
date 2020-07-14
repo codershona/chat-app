@@ -1,18 +1,52 @@
 const socket = io()
 
-socket.on('countUpdated', (count) => {
+socket.on('message', (message) => {
 
-	console.log('The count has been updated!', count)
+	console.log(message)
+
+})
+
+document.querySelector('#message-form').addEventListener('submit', (e) => {
+   
+   e.preventDefault()
+
+   // const message = document.querySelector('input').value
+
+   const message = e.target.elements.message.value
+
+
+
+   socket.emit('sendMessage', message)
+
+
+})
+
+
+
+// socket.on('countUpdated', (count) => {
+
+// 	console.log('The count has been updated!', count)
 	
-})
+// })
 
 
 
-document.querySelector('#increment').addEventListener('click', () => {
+// document.querySelector('#increment').addEventListener('click', () => {
 
-   console.log('Clicked')
+//    console.log('Clicked')
 
-   socket.emit('increment')
+//    socket.emit('increment')
 
 
-})
+// })
+
+
+
+// Socket.io Events Challenge:
+
+   
+
+
+
+
+
