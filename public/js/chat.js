@@ -1,5 +1,16 @@
 const socket = io()
 
+const $messageForm = document.querySelector('#message-form')
+
+const $messageFormInput = $messageForm.querySelector('input')
+
+const $messageFormButton = $messageForm.querySelector('button')
+
+const $sendLocationButton = document.querySelector('#send-location')
+
+
+
+
 // server (emit) -> client (receive) --acknowledgement--> server
 
 // client (emit) -> server (receive) --acknowledgement--> client
@@ -12,9 +23,12 @@ socket.on('message', (message) => {
 
 })
 
-document.querySelector('#message-form').addEventListener('submit', (e) => {
+// document.querySelector('#message-form').addEventListener('submit', (e) => {
+$messageForm.addEventListener('submit', (e) => {
    
    e.preventDefault()
+
+   $messageFormButton.setAttribute('disabled', 'disabled')
 
    // const message = document.querySelector('input').value
 
@@ -26,6 +40,13 @@ document.querySelector('#message-form').addEventListener('submit', (e) => {
 
    // socket.emit('sendMessage', message, (message) => {
    	socket.emit('sendMessage', message, (error) => {
+
+   		$messageFormButton.removeAttribute('disabled')
+
+   		$messageFormInput.value = ''
+
+   		$messageFormInput.focus()
+
 
    	// console.log('The message was delivered!', message)
 
@@ -47,13 +68,17 @@ document.querySelector('#message-form').addEventListener('submit', (e) => {
 })
 
 
-document.querySelector('#send-location').addEventListener('click', () => {
+$sendLocationButton.addEventListener('click', () => {
    
    if (!navigator.geolocation) {
 
    	return alert('Geolocation is not supported by your browser.')
 
    }
+
+   $sendLocationButton.setAttribute('disabled', 'disabled')
+
+
 
    navigator.geolocation.getCurrentPosition((position) => {
     
@@ -65,6 +90,10 @@ document.querySelector('#send-location').addEventListener('click', () => {
 
        }, () => {
 
+       	$sendLocationButton.removeAttribute('disabled')
+
+       	
+
        	console.log('Location shared!')
 
 
@@ -73,6 +102,8 @@ document.querySelector('#send-location').addEventListener('click', () => {
    })
 
 })
+
+
 
 
 
