@@ -1,5 +1,8 @@
 const socket = io()
 
+
+// Elements:
+
 const $messageForm = document.querySelector('#message-form')
 
 const $messageFormInput = $messageForm.querySelector('input')
@@ -8,7 +11,11 @@ const $messageFormButton = $messageForm.querySelector('button')
 
 const $sendLocationButton = document.querySelector('#send-location')
 
+const $messages = document.querySelector('#messages')
 
+// Templates:
+
+const messageTemplate = document.querySelector('#message-template').innerHTML
 
 
 // server (emit) -> client (receive) --acknowledgement--> server
@@ -20,6 +27,13 @@ const $sendLocationButton = document.querySelector('#send-location')
 socket.on('message', (message) => {
 
 	console.log(message)
+
+	const html = Mustache.render(messageTemplate, {
+		message
+	})
+
+	$messages.insertAdjacentHTML('beforeend', html)
+
 
 })
 
@@ -92,7 +106,7 @@ $sendLocationButton.addEventListener('click', () => {
 
        	$sendLocationButton.removeAttribute('disabled')
 
-       	
+
 
        	console.log('Location shared!')
 
