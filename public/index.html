@@ -24,17 +24,19 @@
      <button id="send-location">SEND LOCATION</button>
 
      <script id="message-template" type="text/html">
+       <div>
+     <p>This is a message</p>
+      <p>{{message}}</p>
 
-     	<div>
+        </div>
+     </script>
 
-          <!--  <p>This is a message</p> -->
+   <script id="location-message-template" type="text/html">
+       <div>
+     
+    <p><a href="{{url}}" target="_blank">My Current Location</a></p>
 
-           <p>{{message}}</p>
-
-
-     	</div>
-     	
-
+        </div>
      </script>
 
 	<!-- <button id="increment">+1</button> -->

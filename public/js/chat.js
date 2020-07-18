@@ -17,11 +17,15 @@ const $messages = document.querySelector('#messages')
 
 const messageTemplate = document.querySelector('#message-template').innerHTML
 
+const locationMessageTemplate = document.querySelector('#location-message-template').innerHTML
+
+
 
 // server (emit) -> client (receive) --acknowledgement--> server
 
 // client (emit) -> server (receive) --acknowledgement--> client
 
+// challenge:
 
 
 socket.on('message', (message) => {
@@ -36,6 +40,25 @@ socket.on('message', (message) => {
 
 
 })
+
+
+// challenge:
+
+socket.on('locationMessage', (url) => {
+
+  console.log(url)
+
+  const html = Mustache.render(locationMessageTemplate, {
+    url 
+    
+  })
+
+  $messages.insertAdjacentHTML('beforeend', html)
+
+})
+
+
+
 
 // document.querySelector('#message-form').addEventListener('submit', (e) => {
 $messageForm.addEventListener('submit', (e) => {
