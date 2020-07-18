@@ -14,6 +14,10 @@ const io = socketio(server)
 
 const Filter = require('bad-words')
 
+const { generateMessage } = require('./utils/messages')
+
+
+
 const port = process.env.PORT || 3000
 
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -33,9 +37,20 @@ io.on('connection', (socket) => {
 
 	console.log('New WebSocket connection!')
 
-    socket.emit('message', 'Welcome!')
+    // socket.emit('message', 'Welcome!')
+    // socket.emit('message', {
 
-    socket.broadcast.emit('message', 'A new user has joined!')
+    //     text: 'Welcome!',
+
+    //     createdAt: new Date().getTime()
+
+    // })
+
+     socket.emit('message', generateMessage('Welcome!'))
+
+
+    // socket.broadcast.emit('message', 'A new user has joined!')
+     socket.broadcast.emit('message', generateMessage('A new user has joined!'))
 
 
 
@@ -50,7 +65,8 @@ io.on('connection', (socket) => {
 
         }
 
-     	io.emit('message', message)
+     	// io.emit('message', message)
+        io.emit('message', generateMessage(message))
 
         // callback('Delivered!')
          callback()
@@ -59,7 +75,8 @@ io.on('connection', (socket) => {
 
      socket.on('disconnect', () => {
      
-       io.emit('message', 'A user has left!')
+       // io.emit('message', 'A user has left!')
+       io.emit('message', generateMessage('A user has left!'))
 
      })
 
