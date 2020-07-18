@@ -14,7 +14,7 @@ const io = socketio(server)
 
 const Filter = require('bad-words')
 
-const { generateMessage } = require('./utils/messages')
+const { generateMessage, generateLocationMessage } = require('./utils/messages')
 
 
 
@@ -86,9 +86,13 @@ io.on('connection', (socket) => {
       // io.emit('message', `Location: ${coords.latitude},${coords.longitude}`)
       // io.emit('message', `https://google.com/maps?q=${coords.latitude},${coords.longitude}`)
 
-   io.emit('locationMessage', `https://google.com/maps?q=${coords.latitude},${coords.longitude}`)
+   // io.emit('locationMessage', `https://google.com/maps?q=${coords.latitude},${coords.longitude}`)
+   io.emit('locationMessage', generateLocationMessage(io.emit('locationMessage', `https://google.com/maps?q=${coords.latitude},${coords.longitude}`))
+
 
      callback()
+
+     
 
      })
 

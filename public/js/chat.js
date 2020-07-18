@@ -1,6 +1,4 @@
 const socket = io()
-
-
 // Elements:
 
 const $messageForm = document.querySelector('#message-form')
@@ -53,12 +51,17 @@ socket.on('message', (message) => {
 
 // challenge:
 
-socket.on('locationMessage', (url) => {
+// socket.on('locationMessage', (url) => {
+  socket.on('locationMessage', (message) => {
 
-  console.log(url)
+  // console.log(url)
+  console.log(message)
 
   const html = Mustache.render(locationMessageTemplate, {
-    url 
+    // url 
+    url: message.url,
+
+    createdAt: moment(message.createdAt).format('h:mm a')
 
   })
 
