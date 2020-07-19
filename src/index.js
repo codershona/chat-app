@@ -60,7 +60,7 @@ io.on('connection', (socket) => {
 
     socket.broadcast.to(room).emit('message', generateMessage(`${username} has joined!`))
 
-    
+
 
 
       // socket.emit, io.emit, socket.broadcast.emit
@@ -82,7 +82,7 @@ io.on('connection', (socket) => {
         }
 
      	// io.emit('message', message)
-        io.emit('message', generateMessage(message))
+        io.to('Center City').emit('message', generateMessage(message))
 
         // callback('Delivered!')
          callback()
