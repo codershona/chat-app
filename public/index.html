@@ -18,16 +18,29 @@
 
      <div class="chat__main">
 
-      <div id="messages"></div>
+      <div id="messages" class="chat__messages"></div>
 
-  <form id="message-form">
+      <div class="compose">
+
+    <form id="message-form">
+      <input name="message" placeholder="Message">
+
+        <button>SEND</button>
+
+     </form>
+
+     <button id="send-location">SEND LOCATION</button>
+        
+      </div>
+
+ <!--  <form id="message-form">
     <input name="message" placeholder="Message">
 
     <button>SEND</button>
 
      </form>
 
-     <button id="send-location">SEND LOCATION</button>
+     <button id="send-location">SEND LOCATION</button> -->
        
 
      </div>
@@ -49,20 +62,39 @@
 
      <button id="send-location">SEND LOCATION</button> -->
 
-     
+
 
      <script id="message-template" type="text/html">
-       <div>
+       <div class="message">
      <p>This is a message</p>
-      <p>{{createdAt}} - {{message}}</p>
+      <!-- <p>{{createdAt}} - {{message}}</p> -->
+      <p>
+         <span class="message__name">SOME USERS NAME</span>
+         <span class="message__meta">{{createdAt}}</span>
+
+      </p>
+
+
+      <p>{{message}}</p>
 
         </div>
      </script>
 
+
+
    <script id="location-message-template" type="text/html">
-       <div>
+       <div class="message">
+
+          <p>
+         <span class="message__name">SOME USERS NAME</span>
+         <span class="message__meta">{{createdAt}}</span>
+
+      </p>
      
-    <p>{{createdAt}} - <a href="{{url}}" target="_blank">My Current Location</a></p>
+   <!--  <p>{{createdAt}} - <a href="{{url}}" target="_blank">My Current Location</a></p> -->
+
+    <p><a href="{{url}}" target="_blank">My Current Location</a></p>
+
 
         </div>
      </script>
