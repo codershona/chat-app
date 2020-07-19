@@ -17,6 +17,12 @@ const messageTemplate = document.querySelector('#message-template').innerHTML
 
 const locationMessageTemplate = document.querySelector('#location-message-template').innerHTML
 
+// options:
+
+const { username, room } = Qs.parse(location.search, { ignoreQueryPrefix; true })
+
+
+
 
 
 // server (emit) -> client (receive) --acknowledgement--> server
@@ -183,6 +189,10 @@ $sendLocationButton.addEventListener('click', () => {
    
 
 // Sharing your location:sss
+
+
+
+socket.emit('join', { username, room })
 
 
 
