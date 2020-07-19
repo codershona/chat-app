@@ -19,7 +19,7 @@ const locationMessageTemplate = document.querySelector('#location-message-templa
 
 // options:
 
-const { username, room } = Qs.parse(location.search, { ignoreQueryPrefix; true })
+const { username, room } = Qs.parse(location.search, { ignoreQueryPrefix: true })
 
 
 
