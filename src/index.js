@@ -63,9 +63,7 @@ io.on('connection', (socket) => {
       // const { error, user } = addUser({ id: socket.id, username, room })
        const { error, user } = addUser({ id: socket.id, ...options })
 
-
-
-      if (error) {
+   if (error) {
 
        return callback(error)
 
@@ -76,7 +74,16 @@ io.on('connection', (socket) => {
       socket.emit('message', generateMessage('ADMIN', 'Welcome!'))
 
     socket.broadcast.to(user.room).emit('message', generateMessage('ADMIN', `${user.username} has joined!`))
+    
+    io.to(user.room).emit('roomData', {
 
+      room: user.room,
+      users: getUsersInRoom(user.room)
+
+
+
+
+    })
      
      callback()
 
@@ -117,22 +124,9 @@ io.on('connection', (socket) => {
       
     })
 
-     socket.on('disconnect', () => {
 
-      const user = removeUser(socket.id)
 
-      if (user) {
-
-        io.to(user.room).emit('message', generateMessage('ADMIN', `${user.username} has left!`))
-
-      }
-     
-       // io.emit('message', 'A user has left!')
-       // io.emit('message', generateMessage('A user has left!'))
-
-     })
-
-     // socket.on('sendLocation', (coords) => {
+         // socket.on('sendLocation', (coords) => {
   socket.on('sendLocation', (coords, callback) => {
 
     const user = getUser(socket.id)
@@ -150,6 +144,32 @@ io.on('connection', (socket) => {
      
 
      })
+
+
+
+     socket.on('disconnect', () => {
+
+      const user = removeUser(socket.id)
+
+      if (user) {
+
+        io.to(user.room).emit('message', generateMessage('ADMIN', `${user.username} has left!`))
+
+        io.to(user.room).emit('roomData', {
+          room: user.room,
+          users: getUsersInRoom(user.room)
+
+        })
+
+
+      }
+     
+       // io.emit('message', 'A user has left!')
+       // io.emit('message', generateMessage('A user has left!'))
+
+     })
+
+ 
 
 
 	// socket.emit('countUpdated', count)
