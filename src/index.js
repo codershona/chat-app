@@ -85,8 +85,17 @@ io.on('connection', (socket) => {
      })
 
 
+   // Send messages to correct room :
+
+
+
+
     // socket.on('sendMessage', (message) => {
      socket.on('sendMessage', (message, callback) => {
+
+      const user = getUser(socket.id)
+
+
 
         const filter = new Filter()
 
@@ -97,7 +106,8 @@ io.on('connection', (socket) => {
         }
 
      	// io.emit('message', message)
-        io.to('Center City').emit('message', generateMessage(message))
+        // io.to('Center City').emit('message', generateMessage(message))
+  io.to(user.room).emit('message', generateMessage(message))
 
         // callback('Delivered!')
          callback()
@@ -122,12 +132,15 @@ io.on('connection', (socket) => {
      // socket.on('sendLocation', (coords) => {
   socket.on('sendLocation', (coords, callback) => {
 
+    const user = getUser(socket.id)
+
       // io.emit('message', `Location: ${coords.latitude},${coords.longitude}`)
       // io.emit('message', `https://google.com/maps?q=${coords.latitude},${coords.longitude}`)
 
    // io.emit('locationMessage', `https://google.com/maps?q=${coords.latitude},${coords.longitude}`)
-   io.emit('locationMessage', generateLocationMessage(`https://google.com/maps?q=${coords.latitude},${coords.longitude}`))
+   // io.emit('locationMessage', generateLocationMessage(`https://google.com/maps?q=${coords.latitude},${coords.longitude}`))
 
+  io.to(user.room).emit('locationMessage', generateLocationMessage(`https://google.com/maps?q=${coords.latitude},${coords.longitude}`))
 
      callback()
 
