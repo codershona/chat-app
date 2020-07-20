@@ -77,15 +77,68 @@ const removeUser = (id) => {
 
 }
 
-addUser({
-	id: 22,
-	username: 'Jonny Papa ',
-	room: 'North America'
+const getUser = (id) => {
 
-})
+	return users.find((user) => user.id === id)
+
+}
+
+const getUsersInRoom = (room) => {
+
+	room = room.trim().toLowerCase()
+
+	return users.filter((user) => user.room === room)
+
+}
+
+module.exports = {
+	
+	addUser,
+	removeuser,
+	getUser,
+	getUsersInRoom
+
+}
+
+// addUser({
+
+// 	id: 22,
+// 	username: 'Jonny Papa ',
+// 	room: 'North America'
+
+// })
+
+// addUser({
+
+// 	id: 42,
+// 	username: 'Michael Mike ',
+// 	room: 'South America'
+
+// })
+
+// addUser({
+
+// 	id: 32,
+// 	username: 'Lissa Michi ',
+// 	room: 'Center City'
 
 
-console.log(users)
+// })
+
+// // const user = getUser(42)
+// const user = getUser(421)
+// console.log(user)
+
+// // const userList = getUsersInRoom('South America')
+// // const userList = getUsersInRoom('Center City')
+// const userList = getUsersInRoom('fairmount')
+
+// // console.log(user)  ----: this will show undefined in console.
+
+// console.log(userList)
+
+
+// console.log(users)
 
 // const res = addUser({
 
@@ -101,9 +154,9 @@ console.log(users)
 
 // const removedUser = removeUser(24)
 
-const removedUser = removeUser(22)
+// const removedUser = removeUser(22)
 
-console.log(removedUser)
-console.log(users)
+// console.log(removedUser)
+// console.log(users)
 
 
