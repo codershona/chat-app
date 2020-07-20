@@ -38,6 +38,8 @@ socket.on('message', (message) => {
 
 	const html = Mustache.render(messageTemplate, {
 
+    username: message.username,
+
 		// message
       message: message.text,
       // createdAt: message.createdAt

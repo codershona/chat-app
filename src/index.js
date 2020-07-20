@@ -26,6 +26,9 @@ const publicDirectoryPath = path.join(__dirname, '../public')
 
 app.use(express.static(publicDirectoryPath))
 
+// Render username for text messages:
+
+
 
 // server (emit) -> client (receive) - countUpdated
 
@@ -70,9 +73,9 @@ io.on('connection', (socket) => {
 
       socket.join(user.room)
 
-      socket.emit('message', generateMessage('Welcome!'))
+      socket.emit('message', generateMessage('ADMIN', 'Welcome!'))
 
-    socket.broadcast.to(user.room).emit('message', generateMessage(`${user.username} has joined!`))
+    socket.broadcast.to(user.room).emit('message', generateMessage('ADMIN', `${user.username} has joined!`))
 
      
      callback()
@@ -107,7 +110,7 @@ io.on('connection', (socket) => {
 
      	// io.emit('message', message)
         // io.to('Center City').emit('message', generateMessage(message))
-  io.to(user.room).emit('message', generateMessage(message))
+  io.to(user.room).emit('message', generateMessage(user.username, message))
 
         // callback('Delivered!')
          callback()
@@ -120,7 +123,7 @@ io.on('connection', (socket) => {
 
       if (user) {
 
-        io.to(user.room).emit('message', generateMessage(`${user.username} has left!`))
+        io.to(user.room).emit('message', generateMessage('ADMIN', `${user.username} has left!`))
 
       }
      
