@@ -140,7 +140,7 @@ io.on('connection', (socket) => {
    // io.emit('locationMessage', `https://google.com/maps?q=${coords.latitude},${coords.longitude}`)
    // io.emit('locationMessage', generateLocationMessage(`https://google.com/maps?q=${coords.latitude},${coords.longitude}`))
 
-  io.to(user.room).emit('locationMessage', generateLocationMessage(`https://google.com/maps?q=${coords.latitude},${coords.longitude}`))
+  io.to(user.room).emit('locationMessage', generateLocationMessage(user.username, `https://google.com/maps?q=${coords.latitude},${coords.longitude}`))
 
      callback()
 

@@ -64,6 +64,8 @@ socket.on('message', (message) => {
   console.log(message)
 
   const html = Mustache.render(locationMessageTemplate, {
+
+    username: message.username,
     // url 
     url: message.url,
 
