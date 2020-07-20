@@ -17,6 +17,8 @@ const Filter = require('bad-words')
 const { generateMessage, generateLocationMessage } = require('./utils/messages')
 
 
+const { addUser, removeUser, getUser, getUsersInRoom } = require('./utils/users')
+
 
 const port = process.env.PORT || 3000
 
@@ -52,15 +54,28 @@ io.on('connection', (socket) => {
     // socket.broadcast.emit('message', 'A new user has joined!')
    //  socket.broadcast.emit('message', generateMessage('A new user has joined!'))
 
-     socket.on('join', ({ username, room }) => {
+     // socket.on('join', ({ username, room }, callback) => {
+   socket.on('join', (options, callback) => {
 
-      socket.join(room)
+      // const { error, user } = addUser({ id: socket.id, username, room })
+       const { error, user } = addUser({ id: socket.id, ...options })
+
+
+
+      if (error) {
+
+       return callback(error)
+
+   }
+
+      socket.join(user.room)
 
       socket.emit('message', generateMessage('Welcome!'))
 
-    socket.broadcast.to(room).emit('message', generateMessage(`${username} has joined!`))
+    socket.broadcast.to(user.room).emit('message', generateMessage(`${user.username} has joined!`))
 
-
+     
+     callback()
 
 
       // socket.emit, io.emit, socket.broadcast.emit
@@ -90,9 +105,17 @@ io.on('connection', (socket) => {
     })
 
      socket.on('disconnect', () => {
+
+      const user = removeUser(socket.id)
+
+      if (user) {
+
+        io.to(user.room).emit('message', generateMessage(`${user.username} has left!`))
+
+      }
      
        // io.emit('message', 'A user has left!')
-       io.emit('message', generateMessage('A user has left!'))
+       // io.emit('message', generateMessage('A user has left!'))
 
      })
 
