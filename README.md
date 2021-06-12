@@ -20,8 +20,12 @@ Besides this, The project has implementation of an interesting use case of users
 ## Local Setup
 
 ### Server
+1. Fork the project
+```
+    You will see Fork option in the right side of your current homepage and forked the project to clone it.
+```
 
-1. Clone repository
+2. Clone repository
 ```
 	git clone https://github.com/codershona/chat-app.git
 ```
