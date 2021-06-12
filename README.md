@@ -23,7 +23,8 @@
     
 ```
 <p align="center">
-<img src="https://nameless-wildwood-12156.herokuapp.com/" width=256>
+	
+<img src="https://user-images.githubusercontent.com/57604500/121774649-aab3da80-cb83-11eb-8bf9-ce406950a0fc.png" width=656>
 <br />
 <h3 align="center">CHAT APP</h3>
 </p>
