@@ -1,6 +1,6 @@
 # Chat-App
 
-## Real time web applications with Socket.io (Chat App)
+## Real time web applications with Socket.io (Chat Application)
 #### Project Can be found in here :
  **[Live version](https://nameless-wildwood-12156.herokuapp.com/)**
 
@@ -12,9 +12,9 @@
 </p>
 
 ## Project Description
-This project aims to use SciML to fit a differential equation to the COVID-19 Number-Of-Cases time series data. This would allow us to predict the number of cases in the future, to some degree of accuracy. This would be done separately per district or state, as per the availability of reliable data. The results would be displayed on an interactive graphical webpage.
+This project aims to use Nodejs which is a back-end frameworks to fit a differential equation to the CHAT APPLICATION with users chat data. This would allow us to send our user message and our user also can able to receive our messages. This would be done separately per user as a sender or, as per user as a receiver. The results would be displayed on chat room.
 
-The project also implements an interesting use case of the prediction model: a mobile application that is a personal scheduler/calendar. The user can enter where they are headed to in the next few days, and the application would warn them if those regions are predicted to have a high number of cases then.
+Besides this, The project has implementation of an interesting use case of users current location history: a web application that is send location. The user can enter in the chat room then they can send there message and send location which would display sender's current location. An on the other hadn receiver can view the sender current location.
 
 
 ## Local Setup
@@ -80,7 +80,7 @@ The project also implements an interesting use case of the prediction model: a m
 ```
     node src/utils/users.js
 ```
-### DEPLOYMENT IN HEROKU:
+## DEPLOYMENT IN HEROKU:
 
 1. In the terminal we need to log in heroku at first,
 ``` 
