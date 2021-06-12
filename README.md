@@ -4,24 +4,6 @@
 #### Project Can be found in here :
  **[Live version](https://nameless-wildwood-12156.herokuapp.com/)**
 
-* NOTES :
-
-```
-    - npm init ;
-    - npm i express@4.16.4 ;
-    - node src/index.js ;
-    - npm i nodemon@1.18.7 --save-dev ;
-    - npm run start ;
-    - npm run dev ;
-    -  npm i socket.io@2.2.0 ;
-    - npm i bad-words@3.0.0 ;
-    -  Run this node src/utils/users.js ;
-    * DEPLOY THE APP IN HEROKU:
-    - heroku login ;
-    - heroku create ;
-    - git push heroku master
-    
-```
 <p align="center">
 	
 <img src="https://user-images.githubusercontent.com/57604500/121774649-aab3da80-cb83-11eb-8bf9-ce406950a0fc.png" width=656>
@@ -58,8 +40,62 @@ The project also implements an interesting use case of the prediction model: a m
 	yarn run start
 ```
 
+4. Creating first npm project
+```
+    npm init Or, yarn init
+```
+
+5. Installing Express
+```
+      npm i express@4.16.4
+```
+
+6. Run in the server
+```
+      node src/index.js
+```
+
+7. Installing Nodemon
+```
+      npm i nodemon@1.18.7 --save-dev
+```
 
 
+8. Run the server
+```
+       npm run dev
+```
+
+8. Installing Socket.io
+```
+       npm i socket.io@2.2.0
+```
+
+8. Installing bad-words package
+```
+       npm i bad-words@3.0.0
+```
+
+9. Run This
+```
+    node src/utils/users.js
+```
+### DEPLOYMENT IN HEROKU:
+
+1. In the terminal we need to log in heroku at first,
+``` 
+     heroku login
+```
+
+2. Creating new domain
+```
+     heroku create
+```
+
+3. Push your APP into Heroku
+```
+     git push heroku master
+```
 
 
 
