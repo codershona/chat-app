@@ -16,6 +16,17 @@ This project aims to use Nodejs which is a back-end frameworks to fit a differen
 
 Besides this, The project has implementation of an interesting use case of users current location history: a web application that is send location. The user can enter in the chat room then they can send there message and send location which would display sender's current location. An on the other hadn receiver can view the sender current location.
 
+## 🖥 ENVIRONMENT
+
+| No. | Software                  | Version | Reason                |
+| --- | ------------------------- | ------- | --------------------- |
+| 1.  | Ubuntu 20.04(Linux)       | 20.04   | Default on laptop     |
+| 2.  | Visual Studio Code        | 1.55.2  | My Personal Choice    |
+| 3.  | Node                      | 10.13.0 | To run backend server |
+| 4.  | MongoDB Server            | 4.2     | To run mongoDB server |
+| 5.  | Windows 10                | 10.15.5 | Default on laptop     |
+| 6.  | Responsive Web Application| Any Version Supported | Default on Android or IOS and its mobile-friendly |
+
 
 ## Local Setup
 
