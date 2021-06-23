@@ -46,17 +46,17 @@ Besides this, The project has implementation of an interesting use case of users
 
 4. Creating first npm project
 ```
-    npm init Or, yarn init
+        npm init Or, yarn init
 ```
 
 5. Installing Express
 ```
-      npm i express@4.16.4
+        npm i express@4.16.4
 ```
 
 6. Run in the server
 ```
-      node src/index.js
+       node src/index.js
 ```
 
 7. Installing Nodemon
@@ -67,22 +67,22 @@ Besides this, The project has implementation of an interesting use case of users
 
 8. Run the server
 ```
-       npm run dev
+      npm run dev
 ```
 
 8. Installing Socket.io
 ```
-       npm i socket.io@2.2.0
+      npm i socket.io@2.2.0
 ```
 
 8. Installing bad-words package
 ```
-       npm i bad-words@3.0.0
+      npm i bad-words@3.0.0
 ```
 
 9. Run This
 ```
-    node src/utils/users.js
+     node src/utils/users.js
 ```
 ## DEPLOYMENT IN HEROKU:
 
@@ -102,4 +102,22 @@ Besides this, The project has implementation of an interesting use case of users
 ```
 
 
+<a id="bug"></a>
+## 🐛 Bugs Reporting
+Feel free to [open an issue](https://github.com/codershona/chat-app/issues) on GitHub if you find any bug.
+
+<a id="feature-request"></a>
+## ⭐ Feature Request
+- Feel free to [Open an issue](https://github.com/codershona/chat-app/issues) on GitHub to request any additional features you might need for your use case.  
+- Connect with me on [LinkedIn](https://www.linkedin.com/in/techie-isl-f-b0157b1a5/) & [Twitter](https://twitter.com/BRupanzel).
+- Read My Instagram Blogs in [Instagram](https://www.instagram.com/goldcodetech/).
+- I'd love ❤️️ to hear where you are using this library.  
+
+<a id="release-notes"></a>
+## 📋 Release Notes
+Check [here](https://github.com/codershona/chat-app/releases) for release notes.
+
+<a id="license"></a>
+## 📜 LICENSE
+This software is open source, licensed under the [MIT License](https://github.com/codershona/chat-app/master).
 
