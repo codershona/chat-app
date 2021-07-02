@@ -1,5 +1,4 @@
 /* General Styles */
-
 * {
     margin: 0;
     padding: 0;
@@ -57,7 +56,6 @@ button:disabled {
 }
 
 /* Join Page Styles */
-
 .centered-form {
     background: #333744;
     width: 100vw;
@@ -84,7 +82,6 @@ button:disabled {
 }
 
 /* Chat Page Layout */
-
 .chat {
     display: flex;
 }
@@ -98,7 +95,6 @@ button:disabled {
 }
 
 /* Chat styles */
-
 .chat__main {
     flex-grow: 1;
     display: flex;
@@ -113,9 +109,8 @@ button:disabled {
 }
 
 /* Message Styles */
-
 .message {
-    margin-bottom: 16px;   
+    margin-bottom: 16px;
 }
 
 .message__name {
@@ -134,7 +129,6 @@ button:disabled {
 }
 
 /* Message Composition Styles */
-
 .compose {
     display: flex;
     flex-shrink: 0;
@@ -161,7 +155,6 @@ button:disabled {
 }
 
 /* Chat Sidebar Styles */
-
 .room-title {
     font-weight: 400;
     font-size: 22px;
