@@ -12,7 +12,7 @@
 </p>
 
 ## Project Description
-This project aims to use Nodejs, Socket.io web socket library on the back end. which is a back-end frameworks to fit a differential equation to the CHAT APPLICATION with users chat data. This would allow us to send our user message and our user also can able to receive our messages. This would be done separately per user as a sender or, as per user as a receiver. The results would be displayed on chat room. This app show the process of how to send and receive messages using web sockets and Socket.io to make any real-time application. Realtime chat app with websockets using Node.js, Express and Socket.io with Vanilla JS on the frontend with a custom UI.
+This project aims to use Nodejs, Socket.io web socket library on the back end. which is a back-end frameworks to fit a differential equation to the CHAT APPLICATION with users chat data. This would allow us to send our user message and our user also can able to receive our messages. This would be done separately per user as a sender or, as per user as a receiver. The results would be displayed on chat room. This app show the process of how to send and receive messages using web sockets and Socket.io to make any real-time application.
 
 Besides this, The project has implementation of an interesting use case of users current location history: a web application that is send location. The user can enter in the chat room then they can send there message and send location which would display sender's current location. An on the other hadn receiver can view the sender current location.
 
