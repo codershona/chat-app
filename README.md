@@ -1,6 +1,6 @@
 # Chat-App
 
-## Real time web applications with Socket.io (Chat Application)
+## 📦 Real time web applications with Socket.io (Chat Application)
 #### Project Can be found in here :
  **[Live version](https://nameless-wildwood-12156.herokuapp.com/)**
 
@@ -8,15 +8,15 @@
 	
 <img src="https://user-images.githubusercontent.com/57604500/121774649-aab3da80-cb83-11eb-8bf9-ce406950a0fc.png" width=656>
 <br />
-<h3 align="center">CHAT APP</h3>
+<h3 align="center">👨🏻‍💻 CHAT APP</h3>
 </p>
 
-## Project Description
+## 🎩 Project Description
 This project aims to use Nodejs, Socket.io web socket library on the back end. which is a back-end frameworks to fit a differential equation to the CHAT APPLICATION with users chat data. This would allow us to send our user message and our user also can able to receive our messages. This would be done separately per user as a sender or, as per user as a receiver. The results would be displayed on chat room. This app show the process of how to send and receive messages using web sockets and Socket.io to make any real-time application.
 
 Besides this, The project has implementation of an interesting use case of users current location history: a web application that is send location. The user can enter in the chat room then they can send there message and send location which would display sender's current location. An on the other hadn receiver can view the sender current location.
 
-### Technologies Used :
+### 👉 Technologies Used :
 #### Frontend:
  * Using Custom UI 
  
@@ -37,9 +37,9 @@ Besides this, The project has implementation of an interesting use case of users
 | 6.  | Responsive Web Application| Any Version Supported | Default on Android or IOS and its mobile-friendly |
 
 
-## Local Setup
+## 🚀 Local Setup
 
-### Server
+### 💥 Server
 1. Fork the project
 ```
     You will see Fork option in the right side of your current homepage and forked the project to clone it.
@@ -104,7 +104,7 @@ Besides this, The project has implementation of an interesting use case of users
 ```
      node src/utils/users.js
 ```
-## DEPLOYMENT IN HEROKU:
+## 🔑 DEPLOYMENT IN HEROKU:
 
 1. In the terminal we need to log in heroku at first,
 ``` 
@@ -138,6 +138,6 @@ Feel free to [open an issue](https://github.com/codershona/chat-app/issues) on G
 Check [here](https://github.com/codershona/chat-app/releases) for release notes.
 
 <a id="license"></a>
-## 📜 LICENSE
-This software is open source, licensed under the [MIT License](https://github.com/codershona/chat-app/master).
+### 📜 LICENSE 🔑
+
 
