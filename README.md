@@ -11,7 +11,7 @@
 <h3 align="center">👨🏻‍💻 CHAT APP</h3>
 </p>
 
- ![javascript](https://img.shields.io/badge/%20%20JavaScript-%20%20%20%20730L-f1e05a.svg) ![html](https://img.shields.io/badge/%20%20HTML-%20%20%20%20164L-e34c26.svg)           ![javascript](https://badges.aleen42.com/src/javascript.svg) ![npm](https://badges.aleen42.com/src/npm.svg)
+![javascript](https://img.shields.io/badge/%20%20JavaScript-%20%20%20%20730L-f1e05a.svg) ![html](https://img.shields.io/badge/%20%20HTML-%20%20%20%20164L-e34c26.svg)           ![javascript](https://badges.aleen42.com/src/javascript.svg) ![npm](https://badges.aleen42.com/src/npm.svg)
   ![node](https://badges.aleen42.com/src/node.svg) ![github](https://badges.aleen42.com/src/github.svg)
 
 ## 🎩 Project Description
