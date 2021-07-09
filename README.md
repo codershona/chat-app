@@ -11,6 +11,9 @@
 <h3 align="center">👨🏻‍💻 CHAT APP</h3>
 </p>
 
+ ![javascript](https://img.shields.io/badge/%20%20JavaScript-%20%20%20%20730L-f1e05a.svg) ![html](https://img.shields.io/badge/%20%20HTML-%20%20%20%20164L-e34c26.svg)           ![javascript](https://badges.aleen42.com/src/javascript.svg) ![npm](https://badges.aleen42.com/src/npm.svg)
+  ![node](https://badges.aleen42.com/src/node.svg) ![github](https://badges.aleen42.com/src/github.svg)
+
 ## 🎩 Project Description
 This project aims to use Nodejs, Socket.io web socket library on the back end. which is a back-end frameworks to fit a differential equation to the CHAT APPLICATION with users chat data. This would allow us to send our user message and our user also can able to receive our messages. This would be done separately per user as a sender or, as per user as a receiver. The results would be displayed on chat room. This app show the process of how to send and receive messages using web sockets and Socket.io to make any real-time application.
 
