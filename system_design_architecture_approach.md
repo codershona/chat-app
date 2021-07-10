@@ -24,7 +24,8 @@
  * Minimum latency – There should be minimum delay while chatting with your friends.
  * Highly reliable –  The messages should not be lost.
  * Highly consistent – The ordering of the messages should be maintained and should be the same on both the individuals chat history.
- * Additional requirements
+ * 
+ #### Additional requirements
 
  * Share files, photos, mp3, voice messages.
  * Do group chats.
