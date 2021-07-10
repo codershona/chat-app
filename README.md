@@ -149,7 +149,7 @@ Check [here](https://github.com/codershona/chat-app/releases) for release notes.
 
 ## Project Admin 👨🏻‍💻
 
-|                                                                                         <a href="https://myapp-53a0c.web.app/"><img src="https://user-images.githubusercontent.com/57604500/125161904-56e9e080-e185-11eb-83c9-7a41543983d4.jpg" width=350px height=160px /></a>                                                                                         |
+|                                                                                         <a href="https://myapp-53a0c.web.app/"><img src="https://user-images.githubusercontent.com/57604500/125161924-72ed8200-e185-11eb-8d46-e8f81f7f943a.jpg" width=350px height=160px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        Coder Shona                                                                                                                                     |
 
