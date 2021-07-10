@@ -54,78 +54,78 @@ Besides this, The project has implementation of an interesting use case of users
 
 2. Clone repository
 ```
-	git clone https://github.com/codershona/chat-app.git
+    git clone https://github.com/codershona/chat-app.git
 ```
 
 2. Install the server dependencies
 ```
-	npm install
-	OR, 
-	yarn install
+    npm install
+    OR, 
+    yarn install
 ```
 
 3. Start the server
 ```
-	npm run start
-	OR,
-	yarn run start
+   npm run start
+   OR,
+   yarn run start
 ```
 
 4. Creating first npm project
 ```
-        npm init Or, yarn init
+   npm init Or, yarn init
 ```
 
 5. Installing Express
 ```
-        npm i express@4.16.4
+   npm i express@4.16.4
 ```
 
 6. Run in the server
 ```
-       node src/index.js
+   node src/index.js
 ```
 
 7. Installing Nodemon
 ```
-      npm i nodemon@1.18.7 --save-dev
+   npm i nodemon@1.18.7 --save-dev
 ```
 
 
 8. Run the server
 ```
-      npm run dev
+   npm run dev
 ```
 
 8. Installing Socket.io
 ```
-      npm i socket.io@2.2.0
+   npm i socket.io@2.2.0
 ```
 
 8. Installing bad-words package
 ```
-      npm i bad-words@3.0.0
+   npm i bad-words@3.0.0
 ```
 
 9. Run This
 ```
-     node src/utils/users.js
+   node src/utils/users.js
 ```
 ## 🔑 DEPLOYMENT IN HEROKU:
 
 1. In the terminal we need to log in heroku at first,
 ``` 
-     heroku login
+   heroku login
 ```
 
 2. Creating new domain
 ```
-     heroku create
+    heroku create
 ```
 
 3. Push your APP into Heroku
 ```
-     git push heroku master
+   git push heroku master
 ```
 
 
