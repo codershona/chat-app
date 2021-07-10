@@ -128,17 +128,17 @@ Bill’s chat history:
 
 
 ## Back-of-the-envelope calculations
-Question:
+##### Question:
 
-If we have 1 million messages sent each second with average message size 0.1 KB we need to calculate how much data will be generated in next 5 years?
+Assuming that, we had 2 million messages which was sent by each second or every two second like if we count in average the message size will be 0.2 KB. In this case, it is required to calculate the amount of data that could be developed within the after 5 or 10 years?
 
-Answer:
+##### Answer:
 
-1 Million * 0.1KB = 100000 KB in 1 second = 100MB in 1 second
- 100 * 3600 * 24 = 360000 MB * 24 =  400,000 MB * 25 = 10,000,000 MB = 10000 GB = 10TB in 1 day
-In 1 year we have 365 * 10TB = 3650 TB = 4PB
-In 5 years we have 4 PB * 5 = 20 PB
-Considering that we should not use more that 70% of our capacity we have 20 * 100 / 70 = 200/7 = 30PB
+* 2 Million * 0.2KB = 200000 KB in 2 second = 200MB in 2 second
+* 200 * 5600 * 44 = 560000 MB * 44 =  600,000 MB * 45 = 20,000,000 MB = 20000 GB = 20TB in 2 day
+* In 2 year we have 730 * 20TB = 7300 TB = 7PB
+* In 10 years we have 7 PB * 5 = 35 PB
+* Considering that we should not use more that 70% of our capacity we have 35 * 200 / 70 = 100/7 = 14PB
 
 
 ## High level design
