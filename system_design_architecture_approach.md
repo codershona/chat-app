@@ -33,11 +33,11 @@
  * Messages should be encrypted.
 
 ## API design
-void sendMessage(senderId, recieverId, message)
-boolean isOnline(userId)
-LinkedHashMap<User, List<Message>>> getLatestChat(userId, isBrowser, pagination) in Java.
-Equivalent of LinkedHashMap in older versions of Python is collections.OrderedDict and from CPython 3.6+ or Python 3.7+ it is the standard Dict.
-List<Message> getMessages(recieverId, pagination)
+ * void sendMessage(senderId, recieverId, message)
+ * boolean isOnline(userId)
+ * LinkedHashMap<User, List<Message>>> getLatestChat(userId, isBrowser, pagination) in Java.
+ * Equivalent of LinkedHashMap in older versions of Python is collections.OrderedDict and from CPython 3.6+ or Python 3.7+ it is the standard Dict.
+ * List<Message> getMessages(recieverId, pagination)
 	
 ## Define data model
 We need to save user data and chat history.
