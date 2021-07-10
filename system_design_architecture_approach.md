@@ -7,15 +7,9 @@
 
 
 
-1. Introduction
-Chat messager provide text based instant messaging to its users. Example WhatsApp, Facebook messenger, telegram.
 
-Prerequisites:
-System design introduction : 3 principles of distributed system, 5 step guide for System design.
-
-System design concepts & components : Horizontal scaling, Message queues, Database, Communication protocols
-2. Requirement analysis
-Functional requirements
+### Requirement analysis
+#### Functional requirements
 
 There should be one-to-one conversation using the messager.
 Messenger should keep track of online/ offline status.
@@ -23,7 +17,8 @@ When the user connects to network he should get all the new messages.
 Messenger should save chat history on the servers.
 If the user installs the app on a new device he or she should be able to download all the old messages.
 If the user logs in using a browser then he or she should be able to get top 10 users messages.
-Non-functional requirements
+
+#### Non-functional requirements
 
 Highly available – The service should be always up.
 Minimum latency – There should be minimum delay while chatting with your friends.
@@ -35,13 +30,15 @@ Share files, photos, mp3, voice messages.
 Do group chats.
 Create statuses which disappear in 24 hours.
 Messages should be encrypted.
-3. API design
+
+## API design
 void sendMessage(senderId, recieverId, message)
 boolean isOnline(userId)
 LinkedHashMap<User, List<Message>>> getLatestChat(userId, isBrowser, pagination) in Java.
 Equivalent of LinkedHashMap in older versions of Python is collections.OrderedDict and from CPython 3.6+ or Python 3.7+ it is the standard Dict.
 List<Message> getMessages(recieverId, pagination)
-4. Define data model
+	
+## Define data model
 We need to save user data and chat history.
 
 User : userId, name, isOnline, creationtime, status, lastSeen
@@ -129,7 +126,7 @@ Bill’s chat history:
 ```
 
 
-5. Back-of-the-envelope calculations
+## Back-of-the-envelope calculations
 Question:
 
 If we have 1 million messages sent each second with average message size 0.1 KB we need to calculate how much data will be generated in next 5 years?
