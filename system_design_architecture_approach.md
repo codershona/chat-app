@@ -11,25 +11,25 @@
 ### Requirement analysis
 #### Functional requirements
 
-There should be one-to-one conversation using the messager.
-Messenger should keep track of online/ offline status.
-When the user connects to network he should get all the new messages.
-Messenger should save chat history on the servers.
-If the user installs the app on a new device he or she should be able to download all the old messages.
-If the user logs in using a browser then he or she should be able to get top 10 users messages.
+ * There should be one-to-one conversation using the messager.
+ * Messenger should keep track of online/ offline status.
+ * When the user connects to network he should get all the new messages.
+ * Messenger should save chat history on the servers.
+ * If the user installs the app on a new device he or she should be able to download all the old messages.
+ * If the user logs in using a browser then he or she should be able to get top 10 users messages.
 
 #### Non-functional requirements
 
-Highly available – The service should be always up.
-Minimum latency – There should be minimum delay while chatting with your friends.
-Highly reliable –  The messages should not be lost.
-Highly consistent – The ordering of the messages should be maintained and should be the same on both the individuals chat history.
-Additional requirements
+ * Highly available – The service should be always up.
+ * Minimum latency – There should be minimum delay while chatting with your friends.
+ * Highly reliable –  The messages should not be lost.
+ * Highly consistent – The ordering of the messages should be maintained and should be the same on both the individuals chat history.
+ * Additional requirements
 
-Share files, photos, mp3, voice messages.
-Do group chats.
-Create statuses which disappear in 24 hours.
-Messages should be encrypted.
+ * Share files, photos, mp3, voice messages.
+ * Do group chats.
+ * Create statuses which disappear in 24 hours.
+ * Messages should be encrypted.
 
 ## API design
 void sendMessage(senderId, recieverId, message)
