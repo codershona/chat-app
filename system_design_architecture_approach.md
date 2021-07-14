@@ -3,28 +3,26 @@
  * This is the introduce of discussing the system design where I am going to design a chat app messenger where I can sent the text based current messages to the current users as well as it is similar like Whatsapp, Facebook Messenger and Telegram.  
 
 ### Requirement analysis
-#### Functional requirements
-
- * There should be one-to-one conversation using the messager.
- * Messenger should keep track of online/ offline status.
- * When the user connects to network he should get all the new messages.
- * Messenger should save chat history on the servers.
- * If the user installs the app on a new device he or she should be able to download all the old messages.
- * If the user logs in using a browser then he or she should be able to get top 10 users messages.
+#### Functional requirements 
+ * In the messenger we can use the one-to-one conversations means individual and private conversations systems.
+ * The user can keep track while using the messenger whether the user is in offline status or online status.
+ * The user can get all the latest new messages from another users when the users get connected to network. 
+ * In the chat server the chat app messenger can able to stored or saved the users chat history.
+ * The users can also download the older messages by installing the app into new device.
+ * The users can get top 10 users messages by logging into any browser.
 
 #### Non-functional requirements
-
- * Highly available – The service should be always up.
- * Minimum latency – There should be minimum delay while chatting with your friends.
- * Highly reliable –  The messages should not be lost.
- * Highly consistent – The ordering of the messages should be maintained and should be the same on both the individuals chat history.
+ * Highly available : The chat service could be always in the top.
+ * Minimum Latency : If the user chat with there friends it has least possible to delay.
+ * Highly Reliable : The users message can be automatically deleted or can be hidden.
+ * Highly Consistent : The users send away messages could be able to make well manageable as well as it can similarly has both one-to-one chat history. 
  * 
  #### Additional requirements
 
- * Share files, photos, mp3, voice messages.
- * Do group chats.
- * Create statuses which disappear in 24 hours.
- * Messages should be encrypted.
+ * The users can able to share files, photos, mp3, voice messages.
+ * The users can create and use group chats.
+ * Create status which  can be disappeared within 24 hours.
+ * The users messages needs to be encrypted.
 
 ## API design
  * void sendMessage(senderId, recieverId, message)
