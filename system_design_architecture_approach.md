@@ -160,10 +160,10 @@ Which communication protocol should be used by our clients or users or visitors?
 ## Scale the design
 Now I am going to discuss about the non-functional requirements to scale the design.
 
-Highly available – The service should be always up. We need to use no single point of failure principle. We can have backup copies of the load balancer, chat server and databases.
-Minimum latency – There should be minimum delay while chatting with your friends. We need to use no bottleneck principle to reduce latency. We can add a queue between the server and database for asynchronous processing.
-Highly reliable – There should be no data loss. Having multiple backup copies will ensure that there is no data loss.
-Highly consistent – The ordering of the messages should be maintained and should be the same on both the individuals chat history. Having multiple backup copies will ensure that there is no data loss.
+* <b>Highly available – </b> The service should be always up. We need to use no single point of failure principle. We can have backup copies of the load balancer, chat server and databases.
+* <b>Minimum latency –</b> There should be minimum delay while chatting with your friends. We need to use no bottleneck principle to reduce latency. We can add a queue between the server and database for asynchronous processing.
+* <b>Highly reliable –</b> There should be no data loss. Having multiple backup copies will ensure that there is no data loss.
+* <b>Highly consistent –</b> The ordering of the messages should be maintained and should be the same on both the individuals chat history. Having multiple backup copies will ensure that there is no data loss.
 
  <br>
 <p align="center">
