@@ -1,12 +1,6 @@
 # Design Chat Messager
-### 1. Introduction
- * Chat messager provide text based instant messaging to its users. Example WhatsApp, Facebook messenger, telegram.
- <br>
- <br>
-
-
-
-
+### Basic Principles
+ * This is the introduce of discussing the system design where I am going to design a chat app messenger where I can sent the text based current messages to the current users as well as it is similar like Whatsapp, Facebook Messenger and Telegram.  
 
 ### Requirement analysis
 #### Functional requirements
