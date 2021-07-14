@@ -34,9 +34,9 @@
 ## Define data model
 Here, we need to save the user data and chat history.
 
-<b>User</b> : userId, name, isOnline, creationtime, status, lastSeen
+<b>User :</b>  userId, name, isOnline, creationtime, status, lastSeen
 <br/>
-<b>ChatHistory</b> : UserId, friendId, partition, count, messages.
+<b>ChatHistory :</b> UserId, friendId, partition, count, messages.
 <br/>
 <b>Which database to use?</b>
 
@@ -158,7 +158,7 @@ Which communication protocol should be used by our clients or users or visitors?
 * Here, we can see in the diagram, (Visitor 1) and (Visitor 2) can able to make a communication and sendign messages and chat woth each other. Visitor 1 sends the message to Visitor 2 where basically the message pass in to the chat server that gets forwards into the messages. When the Visitor 1 send the message as we know it goes into chat server in this case, the chat server keeps saved the that message into the database or in to data storage as well as it parelly forwards the message to Visitor 2. In this same process, when the Visitor 2 sends the  message to the chat server the chat server keeps this message saved and stored into the data storage and parelly forward to this message to Visitor 2. This is a kind of communication protocols n system design concepts. In this same process chat server keeps save and stored the message in the column of the oriented database. 
 
 ## Scale the design
-Let us check our non-functional requirements
+Now I am going to discuss about the non-functional requirements to scale the design.
 
 Highly available – The service should be always up. We need to use no single point of failure principle. We can have backup copies of the load balancer, chat server and databases.
 Minimum latency – There should be minimum delay while chatting with your friends. We need to use no bottleneck principle to reduce latency. We can add a queue between the server and database for asynchronous processing.
