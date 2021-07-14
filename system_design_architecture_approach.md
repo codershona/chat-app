@@ -134,13 +134,17 @@ Assuming that, we had 2 million messages which was sent by each second or every 
 
 
 ## High level design
-
-User 1 and 2 are chatting with each other. User 1 sends the message to the chat server which forwards the message to user 2. Similarly user 2 sends the message to chat server which forwards it to user 1. The chat server parallelly saves the message to our column oriented database.
-
-Which communication protocol should be used by our clients?
-
-HTTP long polling
- <br>
+High levels design is a actually knowns as functional requirements. 
+<br/>
+Which communication protocol should be used by our clients or users or visitors?
+* HTTP long polling
+* Discussion about the HTTP long polling, it actually fulfils our first functional requirements. It has one-to-one conversation systems by using the chat messenger.
+* In the second point of the view, this functional requirements has the chat messenger which keep tracks of the online status or offline status.
+* Our chat app could able to systematically send an isOnline signal into the chat server during the app in open again.
+* The users can able to poll the chat server to check for the users online status.
+* In my third point of the view, the functional requirements can also illustrate that the users can able to make a connection with the network so that the users can get receive all the new messages. The users can able to use the getLatestChat API, to check and receive all the latest messages.
+*In my fourth point of the view, the chat messenger can able to save and store the chat history into the chat servers which will actually keep users data stored in the data storage. In case the user has installed the apps into anothe phone or device the users can also able to download the old chats. The users can also get the chat history if the user login the chat web application from the browser the user can able to get top 10 users messages. In this process every time the chat server fetches the users latest or older messages from the databases.
+	
 <p align="center">
 	
 <img src="https://user-images.githubusercontent.com/57604500/124807318-ec0a9080-df5d-11eb-9523-0070a622889e.jpg" width=756>
@@ -149,6 +153,9 @@ HTTP long polling
 </p>
 
 <br/>
+	
+#### Explanation:
+* Here, we can see in the diagram, (Visitor 1) and (Visitor 2) can able to make a communication and sendign messages and chat woth each other. Visitor 1 sends the message to Visitor 2 where basically the message pass in to the chat server that gets forwards into the messages. When the Visitor 1 send the message as we know it goes into chat server in this case, the chat server keeps saved the that message into the database or in to data storage as well as it parelly forwards the message to Visitor 2. In this same process, when the Visitor 2 sends the  message to the chat server the chat server keeps this message saved and stored into the data storage and parelly forward to this message to Visitor 2. This is a kind of communication protocols n system design concepts. In this same process chat server keeps save and stored the message in the column of the oriented database. 
 
 ## Scale the design
 Let us check our non-functional requirements
