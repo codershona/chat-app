@@ -32,38 +32,38 @@
  * List<Message> getMessages(recieverId, pagination)
 	
 ## Define data model
-We need to save user data and chat history.
+Here, we need to save the user data and chat history.
 
-User : userId, name, isOnline, creationtime, status, lastSeen
+<b>User</b> : userId, name, isOnline, creationtime, status, lastSeen
+<br/>
+<b>ChatHistory</b> : UserId, friendId, partition, count, messages.
+<br/>
+<b>Which database to use?</b>
 
-ChatHistory : UserId, friendId, partition, count, messages.
+<b>We can use as databse the column oriented database for example, HBase or Cassandra.</b>
 
-Which database to use?
-
-Column oriented database like HBase or Cassandra.
-
-User metadata:
+<b>User metadata:</b>
 
 ```
 	{
 	userId: user_1;
-	name: Bill;
+	name: Jessica;
 	creationTimestamp: 10000;  
-	status: "Hey there I am on whatsapp";
+	status: "Hey how are you and welcome to my chat app";
 	isOnline: 1;
 	lastSeen: null
 },
 {
 	userId: user_2;
-	name: Steve;
+	name: Jerry;
 	creationTimestamp: 10000;
-	status: "Hey there I am on whatsapp";
+	status: "Hey yes, I am fine and I am using your chat app";
 	isOnline: 1;
 	lastSeen: null
 }
 ```
 	
-Bill’s chat history:
+<b>Jessica’s chat history:</b>
 ```
 	{
 	userId: user_1;
@@ -73,27 +73,27 @@ Bill’s chat history:
 	messages: {
 		{
 			sender: user1;
-			text: "Hi";
+			text: "Hello";
 			timestamp: 10001
 		},
 		{
 			sender: user2;
-			text: "Hello";
+			text: "Hey";
 			timestamp: 10002
 		},
 		{
 			sender: user1;
-			text: "I am fine.";
+			text: "I am fine by the grace of god";
 			timestamp: 10003
 		},
 		{
 			sender: user1;
-			text: "How are you doing?";
+			text: "How do you do?";
 			timestamp: 10004
 		},
 		{
 			sender: user2;
-			text: "I too am fine. Thanks for asking.";
+			text: "I am alsofine thank you";
 			timestamp: 10005
 		}
 	}
@@ -106,12 +106,12 @@ Bill’s chat history:
 	messages: {
 		{
 			sender: user1;
-			text: "Did you watch the movie yesterday? How was it?";
+			text: "Did you went to college yesterday";
 			timestamp: 10006
 		},
 		{
 			sender: user2;
-			text: "It was awesome.";
+			text: "Yes I had went to the collenge yesterday.";
 			timestamp: 10007
 		}
 	}
